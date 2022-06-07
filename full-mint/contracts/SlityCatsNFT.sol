@@ -14,7 +14,7 @@ contract SlityCatsNFT is ERC721, Ownable {
     address payable public withdrawWallet;
     mapping(address => uint256) public walletMints;
 
-    constructor() payabele ERC721('SlityCats', 'SC') {
+    constructor() payable ERC721('SlityCats', 'SC') {
         mintPrice = 0.02 ether;
         totalSupply = 0;
         maxSupply = 1000;
@@ -44,7 +44,7 @@ contract SlityCatsNFT is ERC721, Ownable {
         require(isPublicMintEnabled, 'minting not enabled');
         require(msg.value == quantity_ * mintPrice, 'wrong mint value');
         require(totalSupply + quantity_ <= maxSupply, 'sold out');
-        require(walletMints[msg.sender] + quality_ <= maxPerWallet, 'exceed max wallet');
+        require(walletMints[msg.sender] + quantity_ <= maxPerWallet, 'exceed max wallet');
 
         for (uint256 i = 0; i < quantity_; i++){
             uint256 newTokenId = totalSupply + 1;
