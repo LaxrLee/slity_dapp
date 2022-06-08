@@ -32,6 +32,7 @@ const NavBar = ({ accounts, setAccounts }) => {
             )}
 
         </div>
-    )
-
+    );
 };
+
+export default NavBar;

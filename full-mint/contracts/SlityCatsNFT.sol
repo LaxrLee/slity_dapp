@@ -18,7 +18,7 @@ contract SlityCatsNFT is ERC721, Ownable {
         mintPrice = 0.02 ether;
         totalSupply = 0;
         maxSupply = 1000;
-        maxPerWallet = 5;
+        maxPerWallet = 3;
         // set withdraw wallet address
     }
 
