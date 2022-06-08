@@ -6,7 +6,7 @@ import { ConstructorFragment } from 'ethers/lib/utils';
 const slityCatsNFTAddress = "0x98BfE2763197b391cF54A5aCd63A17a28D3e50D5";
 
 const MainMint = ({ accounts, setAccounts  }) => {
-    const [mintAmount, setMinAmount] = useState(1);
+    const [mintAmount, setMintAmount] = useState(1);
     const isConnected = Boolean(accounts[0]);
 
     async function handleMint() {
